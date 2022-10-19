@@ -1,0 +1,70 @@
+<nav class="navbar" >
+    <div class="d-flex">
+        <a class="logo" href="#"> <img  src="/assets/imagens/logo.png" class="img-fluid" alt="logo Game Mania"> </a>
+        <div class="input-group align-self-center w-75">
+            <button class="btn" type="button" id="button-addon1"></button>
+            <input type="text" class="form-control" placeholder="" aria-label="button addon" aria-describedby="button-addon1">
+        </div>
+        <div class="align-self-center">
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+    </div>
+
+    <ul class="nav justify-content-end">
+        <li class="nav-item">
+            <a class="nav-link img-fluid" href="#"> <img src="assets/imagens/favorites4.png" alt="Botão de favoritos"> </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link img-fluid" href="#"><img src="assets/imagens/cart4.png" alt="carrinho de compras"></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link img-fluid" routerLink="/login"><img src="assets/imagens/boneco4.png" alt="Botão de login"></a>
+        </li>
+        <li class="nav-item log-cad">
+            <a class="nav-link text-center text-md-center text-xl-center" routerLink="/login" id="logcad">
+                <ul class="link">
+                    <li>Faça seu Login</li>
+                    <li>ou</li>
+                    <li>Cadastre-se</li>
+                </ul>
+            </a>
+        </li>
+    </ul>
+
+    <!-- menu para mobile: -->
+
+    <div class="offcanvas offcanvas-end text-bg-success" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+        <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel"> Bem-vindo(a) à Game Mania! </h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+            <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Login</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" href="#">Favoritos</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Carinho</a>
+            </li>
+            <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Contate-nos
+            </a>
+            <ul class="dropdown-menu dropdown-menu-dark">
+                <li><a class="dropdown-item" href="#">Nossas Redes Sociais</a></li>
+                <li>
+                <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="#">Nossos telefones</a></li>
+            </ul>
+            </li>
+        </ul>
+        </div>
+    </div>
+    
+</nav>

@@ -1,81 +1,22 @@
-<nav class="navbar" >
-    <div class="d-flex">
-        <a class="logo" href="#"> <img  src="./imagens/logo.png" class="img-fluid" alt="logo Game Mania"> </a>
-        <div class="input-group align-self-center w-75">
-            <button class="btn" type="button" id="button-addon1"></button>
-            <input type="text" class="form-control" placeholder="" aria-label="button addon" aria-describedby="button-addon1">
-        </div>
-        <div class="align-self-center">
-            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-        </div>
-    </div>
-
-    <ul class="nav justify-content-end">
-        <li class="nav-item">
-            <a class="nav-link img-fluid" href="#"> <img src="imagens/favorites4.png" alt="Botão de favoritos"> </a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link img-fluid" href="#"><img src="imagens/cart4.png" alt="carrinho de compras"></a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link img-fluid" href="#"><img src="imagens/boneco4.png" alt="Botão de login"></a>
-        </li>
-        <li class="nav-item log-cad">
-            <a class="nav-link text-center text-md-center text-xl-center" href="login.component.html" id="logcad">
-                <ul class="link">
-                    <li>Faça seu Login</li>
-                    <li>ou</li>
-                    <li>Cadastre-se</li>
-                </ul>
-            </a>
-        </li>
-    </ul>
-
-    <!-- menu para mobile: -->
-
-    <div class="offcanvas offcanvas-end text-bg-success" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
-        <div class="offcanvas-header">
-        <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel"> Bem-vindo(a) à Game Mania! </h5>
-        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-        </div>
-        <div class="offcanvas-body">
-        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-            <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Login</a>
-            </li>
-            <li class="nav-item">
-            <a class="nav-link" href="#">Favoritos</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Carinho</a>
-            </li>
-            <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Contate-nos
-            </a>
-            <ul class="dropdown-menu dropdown-menu-dark">
-                <li><a class="dropdown-item" href="#">Nossas Redes Sociais</a></li>
-                <li>
-                <hr class="dropdown-divider">
-                </li>
-                <li><a class="dropdown-item" href="#">Nossos telefones</a></li>
-            </ul>
-            </li>
-        </ul>
-        </div>
-    </div>
-    
-</nav>
 <div class="formulario-de-login">
+    <form (ngSubmit)="receberDados()">
     <div class="content">
-    <p class="titulo-login">E-mail:</p> <input class="input-login" type="email" name="email">
-    <p class="titulo-login"> Senha:</p> <input class="input-login" type="password" name="senha">
-    <input class="login-botao" type="submit" value="Enviar" />
-    <a href="#" class="titulo-login"><p class="link-cadastro">Não tem conta? Cadastre-se aqui</p></a>
-    </div>
-</div>
+        <label for="email" class="titulo-login">E-mail:</label> 
+        <input id="arealogin" class="input-login" type="email" name="email" placeholder="Ex.: email@email.com" [(ngModel)]="userModel.email">
+        
+        <label for="senha" class="titulo-login"> Senha:</label> 
+        <input id="areasenha" class="input-login" type="password" name="senha" placeholder="Sua senha aqui..." [(ngModel)]="userModel.password" >
+        
+        <input id="botao-enviar" type="submit" value="Enviar" />
 
-<script src="src/assets/js/script.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+        <a href="#" class="titulo-login">
+            <p class="link-cadastro">Não tem uma conta? Cadastre-se aqui.</p>
+        </a>
+    </div>
+    </form>
+
+<p id="mensagem" style="text-align: center; color: #FFF;" *ngIf=" mensagem != '' && mensagem != logado "> {{ mensagem }} </p>
+<p id="mensagem" style="text-align: center; color: rgb(42, 239, 12);" *ngIf="mensagem == logado"> {{ logado }} </p>
+
+<!-- <p *ngIf=" usuarioLogado != '' ">{{ usuarioLogado }}</p> -->
+</div>

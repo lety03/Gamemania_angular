@@ -1,0 +1,10 @@
+#botao {
+    display: flex;
+    justify-content: center;
+    color: #FFF;
+}
+@media screen and (min-width:750px) {
+    #maissecao {
+        display: none;
+    }
+}

@@ -1,12 +1,25 @@
-let bts =  document.querySelector("#bts");
+// let btm = document.querySelector("#btm");
 
-bts.addEventListener("click", function() {
+//     btm.addEventListener("click", function() {
 
-    let div = document.querySelector("#maissecao");
+//             let div = document.querySelector("#maissecao");
+
+//             if (div.style.display === "none") {
+//                 div.style.display = "block";
+//             } else {
+//                 div.style.display = "none";
+//             }
+//     }); 
+
+    let a = document.getElementById('#botao');
+
+    a.addEventListener("click", function() {
+
+        let div = document.querySelector("#maissecao");
 
     if (div.style.display === "none") {
         div.style.display = "block";
     } else {
-        div.style.display = "none";
+            div.style.display = "none";
     }
-});
+    })
